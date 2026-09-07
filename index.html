@@ -1,146 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghazi Raza | Coming Soon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* CSS resets and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0c0e" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="description" content="Ghazi Raza — Software Engineer at Cisco Systems India. An interactive resume experience is loading." />
+    <title>Ghazi Raza — Interactive Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="ambient ambient-one"></div>
+      <div class="ambient ambient-two"></div>
+      <div class="grain"></div>
+      <div class="cursor-glow" aria-hidden="true"></div>
 
-        body {
-            background: #0f172a; /* Deep modern tech blue/black */
-            color: #f8fafc;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
+      <header class="site-header">
+        <a class="wordmark" href="#top" aria-label="Ghazi Raza home">
+          <span class="wordmark-mark">GR</span>
+          <span>GHazi<span class="wordmark-muted">/</span>RAZA</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#signal">01 / signal</a>
+          <a href="#contact">02 / connect</a>
+        </nav>
+        <div class="availability" aria-label="Available for good ideas"><span class="status-dot"></span><span class="availability-copy">available for good ideas</span></div>
+      </header>
 
-        /* Main card container */
-        .container {
-            text-align: center;
-            max-width: 600px;
-            width: 100%;
-            padding: 50px 40px;
-            background: #1e293b;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            border: 1px solid #334155;
-        }
+      <main id="top">
+        <section class="hero section-frame" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow reveal"><span class="eyebrow-line"></span> interactive resume / 2026</p>
+            <h1 id="hero-title" class="hero-title reveal reveal-delay-1">
+              <span class="hero-title-light">Building</span>
+              <span class="hero-title-accent">systems</span>
+              <span class="hero-title-light">with</span>
+              <span class="hero-title-outline">signal<span class="cursor-block">_</span></span>
+            </h1>
+            <p class="hero-intro reveal reveal-delay-2">I’m <strong>Ghazi Raza</strong> — a Software Engineer at Cisco Systems India. This is the preflight screen for a resume you can explore, not just read.</p>
+            <div class="hero-actions reveal reveal-delay-3">
+              <a class="button button-primary magnetic" href="#signal"><span>Enter the experience</span><span class="button-arrow">↘</span></a>
+              <a class="text-link" href="#contact">Skip to contact <span>↓</span></a>
+            </div>
+          </div>
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 8px;
-            font-weight: 700;
-        }
+          <div class="hero-visual reveal reveal-delay-2" aria-label="Animated system map illustration">
+            <div class="visual-label label-top">NODE / 001</div>
+            <div class="visual-label label-bottom">LAT 17.38° N / LONG 78.48° E</div>
+            <div class="orbit orbit-outer"></div>
+            <div class="orbit orbit-inner"></div>
+            <div class="orbit orbit-dashed"></div>
+            <div class="core-node"><span>GR</span></div>
+            <div class="node node-a"><span>01</span></div>
+            <div class="node node-b"><span>02</span></div>
+            <div class="node node-c"><span>03</span></div>
+            <div class="connector connector-a"></div>
+            <div class="connector connector-b"></div>
+            <div class="connector connector-c"></div>
+            <div class="scan-beam"></div>
+            <div class="crosshair crosshair-one"></div>
+            <div class="crosshair crosshair-two"></div>
+            <div class="visual-caption"><span class="pulse-mark"></span> portfolio signal detected</div>
+          </div>
 
-        h2 {
-            font-size: 1.1rem;
-            color: #38bdf8; /* Bright tech blue accent */
-            margin-bottom: 24px;
-            font-weight: 500;
-        }
+          <div class="hero-meta reveal reveal-delay-3">
+            <span>scroll to decode</span>
+            <span class="meta-line"></span>
+            <span class="meta-index">00 — 03</span>
+          </div>
+        </section>
 
-        p {
-            color: #94a3b8;
-            line-height: 1.6;
-            margin-bottom: 32px;
-            font-size: 1.05rem;
-        }
-
-        /* Animated status pill */
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(56, 189, 248, 0.1);
-            color: #38bdf8;
-            padding: 8px 16px;
-            border-radius: 999px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            margin-bottom: 32px;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-        }
-
-        .pulse {
-            width: 8px;
-            height: 8px;
-            background: #38bdf8;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(56, 189, 248, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
-        }
-
-        /* Call to action buttons */
-        .links {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-        }
-
-        .links a {
-            text-decoration: none;
-            color: #f8fafc;
-            background: #334155;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: all 0.2s ease;
-        }
-
-        .links a:hover {
-            background: #475569;
-            transform: translateY(-2px);
-        }
-
-        .links a.primary {
-            background: #0284c7;
-            color: white;
-        }
-
-        .links a.primary:hover {
-            background: #0369a1;
-        }
-
-        /* Mobile responsiveness */
-        @media (max-width: 480px) {
-            h1 { font-size: 2rem; }
-            .container { padding: 40px 20px; }
-            .links { flex-direction: column; }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="status">
-            <div class="pulse"></div>
-            Infrastructure in progress
+        <div class="ticker" aria-label="Topics">
+          <div class="ticker-track">
+            <span>distributed systems</span><i>✳</i><span>clean interfaces</span><i>✳</i><span>curious by default</span><i>✳</i><span>distributed systems</span><i>✳</i><span>clean interfaces</span><i>✳</i><span>curious by default</span><i>✳</i>
+          </div>
         </div>
 
-        <h1>Ghazi Raza</h1>
-        <h2>Software Engineer at Cisco India</h2>
-        
-        <p>I am currently configuring the backend routing and building out my interactive digital resume. My full portfolio site will be launching here soon.</p>
+        <section id="signal" class="signal section-frame" aria-labelledby="signal-title">
+          <div class="section-heading reveal">
+            <p class="eyebrow"><span class="eyebrow-line"></span> 01 / the signal</p>
+            <h2 id="signal-title">A resume with<br /><em>range.</em></h2>
+          </div>
+          <div class="signal-grid">
+            <article class="signal-card signal-card-dark reveal reveal-delay-1">
+              <div class="card-top"><span>01</span><span>engineering</span></div>
+              <div class="card-icon icon-brackets">{ }</div>
+              <h3>Make complexity<br />feel simple.</h3>
+              <p>From networking foundations to production-grade software, I care about the invisible details that make systems feel effortless.</p>
+              <span class="card-foot">systems / scale / craft</span>
+            </article>
+            <article class="signal-card signal-card-lime reveal reveal-delay-2">
+              <div class="card-top"><span>02</span><span>approach</span></div>
+              <div class="card-icon icon-orbit">◌</div>
+              <h3>Stay curious.<br />Ship clearly.</h3>
+              <p>The best work sits at the intersection of a sharp question, a thoughtful constraint, and a team that keeps learning.</p>
+              <span class="card-foot">learn / build / iterate</span>
+            </article>
+            <article class="signal-card signal-card-paper reveal reveal-delay-3">
+              <div class="card-top"><span>03</span><span>next chapter</span></div>
+              <div class="card-icon icon-arrow">↗</div>
+              <h3>The full story<br />is loading.</h3>
+              <p>This landing page is the first coordinate. Soon: projects, decisions, lessons, and the work behind the work.</p>
+              <span class="card-foot">coming soon / stay tuned</span>
+            </article>
+          </div>
+        </section>
 
-        <div class="links">
-            <a href="https://www.linkedin.com/in/ghaziraza/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/ghaziAlig/" target="_blank">GitHub</a>
-            <a href="mailto:me@ghaziraza.com" class="primary">Contact Me</a>
-        </div>
+        <section id="contact" class="contact section-frame" aria-labelledby="contact-title">
+          <div class="contact-copy reveal">
+            <p class="eyebrow"><span class="eyebrow-line"></span> 02 / open channel</p>
+            <h2 id="contact-title">Let’s make<br /><span>something <em>useful.</em></span></h2>
+            <p class="contact-note">The resume is still compiling. The signal is already live.</p>
+          </div>
+          <div class="contact-links reveal reveal-delay-1">
+            <a class="contact-button contact-linkedin magnetic" href="https://www.linkedin.com/in/ghaziraza/" target="_blank" rel="noopener noreferrer" aria-label="Open Ghazi Raza on LinkedIn">
+              <span class="contact-icon">in</span><span class="contact-label"><small>professional network</small>LinkedIn</span><span class="contact-arrow">↗</span>
+            </a>
+            <a class="contact-button contact-github magnetic" href="https://github.com/ghaziAlig/" target="_blank" rel="noopener noreferrer" aria-label="Open Ghazi Raza on GitHub">
+              <span class="contact-icon">⌘</span><span class="contact-label"><small>code & experiments</small>GitHub</span><span class="contact-arrow">↗</span>
+            </a>
+            <a class="contact-button contact-email magnetic" href="mailto:ghazi.raza@icloud.com" aria-label="Email Ghazi Raza at ghazi dot raza at icloud dot com">
+              <span class="contact-icon">@</span><span class="contact-label"><small>direct line</small>ghazi.raza@icloud.com</span><span class="contact-arrow">↗</span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>© 2026 Ghazi Raza</span><span>made with intent <span class="footer-star">✳</span></span><span>scroll progress <b id="progress-value">00%</b></span>
+      </footer>
+      <div class="toast" role="status" aria-live="polite"></div>
     </div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
